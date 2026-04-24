@@ -250,6 +250,11 @@
       .t-body{padding:18px 16px}
       .t-quote{font-size:0.82rem}
     }
+
+    /* SCENE IMAGES */
+    .scene-img-wrap{width:100%;overflow:hidden;line-height:0}
+    .scene-img{width:100%;height:clamp(200px,30vw,420px);object-fit:cover;object-position:center 40%;filter:saturate(0.92);transition:transform 0.6s ease}
+    .scene-img-wrap:hover .scene-img{transform:scale(1.02)}
   </style>
 </head>
 <body>
@@ -335,42 +340,37 @@
       </div>
     </div>
 
-    <div class="free-course-banner fade-in">
-      <span class="free-badge">🔥 はじめてのセットコース</span>
-      <h3 style="font-family:'Shippori Mincho',serif;font-size:1.25rem;font-weight:700;color:var(--text-dark);margin-bottom:10px;letter-spacing:0.05em;">
-        時間内、どこでも好きなだけ脱毛できる。<br>
-        <span style="color:var(--maple-red);">脱毛 free コース</span>、はじまりました。
-      </h3>
-      <p style="font-family:'Noto Sans JP',sans-serif;font-size:0.83rem;font-weight:300;color:var(--text-mid);line-height:2.0;">
-        制限時間内はお好きな部位を、何パーツでも自由に脱毛できます。いつも気になっていたあの部位も、この機会にまとめてケアしてみませんか？
-      </p>
-      <div class="free-courses">
-        <div class="free-course-item">
-          <div class="free-time">40<small style="font-size:1.2rem;">分</small></div>
-          <div class="free-label">脱毛 free コース</div>
-          <div style="margin-top:8px;font-family:'Noto Sans JP',sans-serif;font-size:0.70rem;color:var(--text-light);">時間内なら部位は自由</div>
-          <div class="free-label">６，０００円</div>
-          <div class="free-label">　↓</div>
-          <div class="free-label">初回限定５，０００円</div>
-        </div>
-        <div class="free-course-item">
-          <div class="free-time">60<small style="font-size:1.2rem;">分</small></div>
-          <div class="free-label">脱毛 free コース</div>
-          <div style="margin-top:8px;font-family:'Noto Sans JP',sans-serif;font-size:0.70rem;color:var(--text-light);">全身をじっくりケアしたい方に</div>
-          <div class="free-label">１０，０００円</div>
-          <div class="free-label">　　↓</div>
-          <div class="free-label">初回限定８,０００円</div>
-        </div>
+    <!-- セットコース -->
+    <div class="price-free-grid fade-in">
+      <div class="price-free-card">
+        <span class="free-badge">🔥 目玉サービス</span>
+        <div style="font-family:'Noto Sans JP',sans-serif;font-size:0.72rem;font-weight:400;color:var(--maple-gold);letter-spacing:0.14em;margin-top:14px;margin-bottom:6px;">初めてのセットコース A</div>
+        <div class="price-free-big">40<span style="font-size:1.8rem;">分</span></div>
+        <div class="price-free-title">お好きなパーツを組み合わせ可</div>
+        <p class="price-free-desc">
+          通常 <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(255,255,255,0.7);text-decoration:line-through;">¥6,000</span><br>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--maple-gold);font-weight:500;">¥5,000</span>
+          <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-left:4px;">クーポン利用で</span>
+        </p>
+      </div>
+      <div class="price-free-card">
+        <span class="free-badge">🔥 目玉サービス</span>
+        <div style="font-family:'Noto Sans JP',sans-serif;font-size:0.72rem;font-weight:400;color:var(--maple-gold);letter-spacing:0.14em;margin-top:14px;margin-bottom:6px;">初めてのセットコース B</div>
+        <div class="price-free-big">70<span style="font-size:1.8rem;">分</span></div>
+        <div class="price-free-title">お好きなパーツを組み合わせ可</div>
+        <p class="price-free-desc">
+          通常 <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(255,255,255,0.7);text-decoration:line-through;">¥10,000</span><br>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--maple-gold);font-weight:500;">¥8,000</span>
+          <span style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-left:4px;">クーポン利用で</span>
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMAGE STRIP -->
-<div class="image-strip">
-  <div class="image-strip-wrap"><img src="treatment1.png" alt="脱毛施術イメージ"></div>
-  <div class="image-strip-wrap"><img src="treatment2.png" alt="メンズ脱毛施術"></div>
-  <div class="image-strip-wrap"><img src="treatment3.png" alt="kaede楓salon 施術風景"></div>
+<!-- IMAGE 1: features → price -->
+<div class="scene-img-wrap">
+  <img src="treatment1.png" alt="脱毛施術イメージ" class="scene-img">
 </div>
 
 <!-- PRICE -->
@@ -424,27 +424,27 @@
           </div>
         </div>
         <div class="price-table fade-in d1">
-          <div class="price-th navy">スペシャルメニュー</div>
-          <div class="price-row">
+          <div class="price-th navy">スペシャルコースメニュー（税込）</div>
+          <div class="price-row" style="padding:18px 22px;">
             <div class="price-row-l">
-              <div class="price-row-name">全身脱毛 <span class="hot">HOT!</span></div>
-              <div class="price-row-parts">一番人気！　※全身脱毛コースにはお顔の脱毛は含みますが、VIO・二の腕・背中は含みません</div>
+              <div class="price-row-name" style="font-size:0.95rem;">全身＋VIO＋二の腕 <span class="hot">PREMIUM</span></div>
+              <div class="price-row-parts" style="margin-top:5px;font-size:0.78rem;">欲張りな貴方に。気になる部位はすべて施術できます。</div>
             </div>
-            <div class="price-row-r"><span class="price-time">120分</span><span class="price-amt" style="color:var(--navy);">¥11,000</span></div>
+            <div class="price-row-r"><span class="price-amt" style="color:var(--navy);font-size:1.5rem;">¥18,000</span></div>
           </div>
-          <div class="price-row">
+          <div class="price-row" style="padding:18px 22px;">
             <div class="price-row-l">
-              <div class="price-row-name">顔のみ</div>
-              <div class="price-row-parts">つるつるお肌で印象UP！</div>
+              <div class="price-row-name" style="font-size:0.95rem;">全身＋VIO <span class="hot">HOT!</span></div>
+              <div class="price-row-parts" style="margin-top:5px;font-size:0.78rem;">これぞ王道のメンズ脱毛コース！</div>
             </div>
-            <div class="price-row-r"><span class="price-time">25分</span><span class="price-amt">¥3,000</span></div>
+            <div class="price-row-r"><span class="price-amt" style="color:var(--navy);font-size:1.5rem;">¥13,000</span></div>
           </div>
-          <div class="price-row">
+          <div class="price-row" style="padding:18px 22px;">
             <div class="price-row-l">
-              <div class="price-row-name">VIO</div>
-              <div class="price-row-parts">臭いや蒸れの解消に！</div>
+              <div class="price-row-name" style="font-size:0.95rem;">全身脱毛</div>
+              <div class="price-row-parts" style="margin-top:5px;font-size:0.78rem;">まずはここから！　※VIO・背中・二の腕は対象外です</div>
             </div>
-            <div class="price-row-r"><span class="price-time">25分</span><span class="price-amt">¥4,000</span></div>
+            <div class="price-row-r"><span class="price-amt" style="color:var(--navy);font-size:1.5rem;">¥10,000</span></div>
           </div>
         </div>
       </div>
@@ -467,21 +467,7 @@
       </div>
     </div>
 
-    <!-- Free Course Pricing -->
-    <div class="price-free-grid fade-in">
-      <div class="price-free-card">
-        <span class="free-badge">🔥 目玉サービス</span>
-        <div class="price-free-big">30<span style="font-size:1.8rem;">分</span></div>
-        <div class="price-free-title">脱毛 free コース</div>
-        <p class="price-free-desc">30分の制限時間内は、お好きな部位を好きなだけ脱毛できます。料金はご来店時にスタッフにご確認ください。</p>
-      </div>
-      <div class="price-free-card">
-        <span class="free-badge">🔥 目玉サービス</span>
-        <div class="price-free-big">60<span style="font-size:1.8rem;">分</span></div>
-        <div class="price-free-title">脱毛 free コース</div>
-        <p class="price-free-desc">60分でたっぷり全身をケア。複数パーツをまとめてケアしたい方に最適です。料金はご来店時にご確認ください。</p>
-      </div>
-    </div>
+
 
     <div class="price-note-box fade-in">
       ※ 料金はすべて税込です。　※ コース加入・回数券・入会金は不要です。　※ 1回だけのご利用も大歓迎（次回勧誘なし）。<br>
@@ -489,6 +475,11 @@
     </div>
   </div>
 </section>
+
+<!-- IMAGE 2: price → testimonials -->
+<div class="scene-img-wrap">
+  <img src="treatment2.png" alt="メンズ脱毛施術" class="scene-img">
+</div>
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
@@ -549,6 +540,11 @@
     </div>
   </div>
 </section>
+
+<!-- IMAGE 3: testimonials → access -->
+<div class="scene-img-wrap">
+  <img src="treatment3.png" alt="kaede楓salon 施術風景" class="scene-img">
+</div>
 
 <!-- ACCESS -->
 <section id="access">
